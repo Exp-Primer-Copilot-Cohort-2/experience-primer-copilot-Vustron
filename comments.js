@@ -1,65 +1,33 @@
 // create web server
-// npm install express
-// npm install body-parser
-// npm install nodemon
-// npm install mongoose
-// npm install ejs
-// npm install express-session
-// npm install connect-mongo
-// npm install connect-flash
-// npm install method-override
-// npm install passport
-// npm install passport-local
-// npm install passport-local-mongoose
-// npm install express-validator
-// npm install express-sanitizer
-// npm install multer
-// npm install cloudinary
-// npm install cloudinary-storage
-// npm install express-fileupload
-// npm install express-middleware
-// npm install express-async-handler
-// npm install express-async-errors
-// npm install http-errors
-// npm install http-errors-handler
-// npm install helmet
-// npm install csurf
-// npm install express-csurf
-// npm install express-rate-limit
-// npm install express-rate-limit-redis
-// npm install express-rate-limit-mongo
-// npm install express-rate-limit-memcached
-// npm install express-rate-limit-mysql
-// npm install express-rate-limit-postgres
-// npm install express-rate-limit-redis
-// npm install express-rate-limit-mongodb
-// npm install express-rate-limit-memcached
-// npm install express-rate-limit-mysql
-// npm install express-rate-limit-postgres
-// npm install express-rate-limit-sqlite
-// npm install express-rate-limit-leveldb
-// npm install express-rate-limit-redis
-// npm install express-rate-limit-mongodb
-// npm install express-rate-limit-memcached
-// npm install express-rate-limit-mysql
-// npm install express-rate-limit-postgres
-// npm install express-rate-limit-sqlite
-// npm install express-rate-limit-leveldb
-// npm install express-rate-limit-redis
-// npm install express-rate-limit-mongodb
-// npm install express-rate-limit-memcached
-// npm install express-rate-limit-mysql
-// npm install express-rate-limit-postgres
-// npm install express-rate-limit-sqlite
-// npm install express-rate-limit-leveldb
-// npm install express-rate-limit-redis
-// npm install express-rate-limit-mongodb
-// npm install express-rate-limit-memcached
-// npm install express-rate-limit-mysql
-// npm install express-rate-limit-postgres
-// npm install express-rate-limit-sqlite
-// npm install express-rate-limit-leveldb
-// npm install express-rate-limit-redis
-// npm install express
+const express = require('express');
+const app = express();
 
+// create a route
+app.get('/', (req, res) => {
+  res.send('Hello World');
+});
 
+// create a route
+app.get('/comments', (req, res) => {
+  res.send('Comments');
+});
+
+// create a route
+app.get('/comments/new', (req, res) => {
+  res.send('New Comments');
+});
+
+// create a route
+app.get('/comments/:id', (req, res) => {
+  res.send('Show Comments');
+});
+
+// create a route
+app.get('/comments/:id/edit', (req, res) => {
+  res.send('Edit Comments');
+});
+
+// start the server
+app.listen(3000, () => {
+  console.log('Server is running on http://localhost:3000');
+});
